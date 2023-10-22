@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0%;
     margin: 0%;
@@ -5,23 +9,29 @@
     box-sizing: border-box;
 }
 
-#nav-bar {
+#navbar {
    width: 100%;
    height: fit-content;
    background-color: black;
    position: fixed;
    top: 0;
 }
+
 ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding-left: 100px;
 }
 
 li {
     padding: 20px;
     padding-right: 100px;
     font-size: 1.5rem;
+}
+
+#navbar a {
+    text-decoration: none;
 }
 
 #welcome-section {
@@ -43,20 +53,28 @@ li {
 
 #projects {
     width: 100%;
-    height: 100vh;
+    height:100vh;
     background-color: burlywood;
 }
 
-#projects header , #Contact header{
+#projects h2 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 3rem;
+    padding-top: 40px;
+}
+
+#Contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 60px;
+    padding-top: 160px;
 }
 
 #projects a {
     text-decoration: none;
     display: block;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 100px;
     font-size: xx-large;
     color:grey
 }
@@ -81,27 +99,98 @@ li {
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
+     
 }
 
-#Contact header {
-    padding-bottom: 30vh;
+.form-div {
+    margin-top: 20px;
+}
+
+#Contact #submit {
+    font-size: xx-large;
+    color: black;
+    border: none;
+    margin-top: 10px;
+    background-color: lightgreen;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
+    
 }
 
 #Contact .form-div  input, textarea {
     font-size: 2rem;
 }
 
+@media (max-width: 980px) {
+    #projects a {
+    margin-top: 50px;
+    }
+}
+
 
 @media (max-width: 780px){
-    #nav-bar li {
+    #navbar li {
         padding-right: 40px;
+        font-size: medium;
     }
-    #Contact form{
+
+    #welcome-section, #projects a {
+        font-size: medium;
+    }
+
+    #projects h2, #Contant h2 {
+        font-size: 2rem;
+    }
+
+    #Contact form, #Contact #text, #Contact #email, #Contact #textarea {
+        font-size: 1rem;
+    }
+
+    #projects a {
+        margin-top: 70px;
+    }
+
+    .form-div {
+        margin-top: 5px;
+    }
+
+    #Contact #submit {
+        font-size: medium;
+        margin-top: 1px;
+    }
+
+    #Contact h2 {
+        padding-bottom: 30px;
+        padding-top: 160px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    #navbar ul {
+        padding-right: 60px ;
+    }
+    #navbar li {
+        padding-right: 20px;
+        font-size: small;
+    }
+
+    #Contact #submit {
+        font-size: xx-small;
+        margin-top: 0%;
+    }
+
+    #welcome-section, #projects a {
+        font-size: small;
+    }
+
+    #projects h2, #Contact h2 {
         font-size: 1.5rem;
     }
-    #Contact .form-div  input, textarea {
-        font-size: 1.5rem;
+
+    #Contact form, #Contact #text, #Contact #email, #Contact #textarea {
+        font-size: 0.6rem;
     }
-   
 
 }
